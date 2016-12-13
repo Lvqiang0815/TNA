@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 设置编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<!-- 配置全局国际化资源文件:资源文件和struts.xml放在一起 -->
+	<constant name="struts.custom.i18n.resources" value="globalMessages"/>
+
+	<!-- 自动加载struts.xml -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+
+	<!-- 整合spring -->
+	<constant name="struts.objectFactory" value="spring"></constant>
+
+	<!-- action组件必须在package包中 -->
+	<!-- 
+	<package name="admin" namespace="/admin" extends="struts-default">
+		配置Action:name映射的虚拟URL class:包名+类名
+		<action name="addLeague" class="com.oracle.soccer.action.AddLeagueAction">
+			
+			配置返回结果：name就是execute方法返回值。  标签体：跳转页面的URL
+			<result name="success">/admin/AddLeagueSucc.jsp</result>
+			<result name="input">/admin/AddLeague.jsp</result>
+		</action>
+	</package> 
+	-->
+</struts>
+
